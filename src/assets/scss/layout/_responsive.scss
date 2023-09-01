@@ -11,9 +11,10 @@
     .burger-icon {
         display: none;
     }
-    // .container {
-    //     max-width: 1434px;
-    // }
+    .container {
+        max-width: 1434px;
+        
+    }
 }
 @include media-breakpoint-down(xxl) {
     //max-width: 1399.98px
@@ -33,6 +34,11 @@
         //oleksii savchenko contribution
         .burger-icon {
             display: none;
+        }
+
+        .step-list {
+            flex-direction: column;
+           
         }
 }
 @include media-breakpoint-down(xl) {

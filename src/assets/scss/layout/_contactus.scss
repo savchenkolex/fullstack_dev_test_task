@@ -1,4 +1,28 @@
 .contactus-section {
     padding-top: 91px;
     padding-bottom: 86px;
+    background-color: $color-gray-100;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 200px;
+
+
+        .top-box {
+            grid-column: 1 / 4;
+            grid-row: 1;
+
+        }
+
+        .adress-box {
+            grid-column: 1 / 2;
+            grid-row: 2;
+        }
+
+        .form-box {
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;
+        }
+    }
 }

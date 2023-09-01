@@ -26,10 +26,12 @@
             width: 194px;
             height: 195px;
             background: url(../imgs/template/pattern-2.svg) no-repeat;
-            background-size: cover;
+            background-size: 194px;
+            background-position: bottom left 50px;
             position: absolute;
             top: 0;
-            right: -50px;
+            right: 0;
+            overflow: hidden;
         }
         
     }
