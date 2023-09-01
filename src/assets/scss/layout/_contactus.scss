@@ -23,6 +23,17 @@
         .form-box {
             grid-column: 2 / 4;
             grid-row: 2 / 4;
+
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .submit-wrapper {
+                display: flex;
+                flex-direction: row;
+                gap: 65px;
+            }
         }
     }
 }
