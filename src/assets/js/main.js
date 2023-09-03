@@ -567,3 +567,38 @@ function checkBilled2() {
 if ($(".mobile-header-wrapper-inner").length) {
   const ps = new PerfectScrollbar(".mobile-header-wrapper-inner");
 }
+
+/*----------------------
+Contact us form handler:
+------------------------*/
+
+const contactUsForm = document.querySelector(".contact-us-form");
+const contactUsFormListener = contactUsForm.addEventListener("submit", contactUsFormHandler)
+
+async function contactUsFormHandler (event) {
+  event.preventDefault();
+  const {name, email, message} = event.target.elements;
+  const data = {
+    "name": name.value,
+    "email": email.value,
+    "message": message.value,
+  }
+
+  try {
+    const URL = "https://api.byteplex.info/api/test/contact/";
+    const response = await fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    
+    if (!response.ok) {
+      throw new Error(response.status + response.statusText);
+    }
+    
+  } catch (error) {
+    console.error(error);
+  }
+}

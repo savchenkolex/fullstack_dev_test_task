@@ -13,10 +13,12 @@
                 a.address-link.email(href="mailto:contact@company.com") contact@company.com
 
             .form-box 
-                form
-                    input(type="text" placeholder="Name")
-                    input(type="text" placeholder="Email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$")
-                    textarea(name="message" cols="60" rows="10" placeholder="Message")
+                form.contact-us-form
+                    input(type="text" name="name" placeholder="Name" required)
+                    input(type="email" name="email" placeholder="Email" patern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$" required)
+                    textarea(name="message" cols="60" rows="10" placeholder="Message" required)
                     .submit-wrapper
                         button(type="submit" ) Send Message
                         p By clicking contact us button, you agree our terms and policy,
+
+                        
