@@ -2,20 +2,21 @@
   .container
     .contacts-wrapper
         .top-box
-            h2 contact us
-            p Have an prject in mind?
-            p The right move at the right time saves your investment. live the dream of expanding your business.
-        .address-box 
-            p.address-title Corporation
-            p 4517 Washington Ave. Manchester, Kentucky 39495
-            a(href="tel:+(239)5550108") (239) 555-0108
-            a(href="mailto:contact@company.com") contact@company.com
+            h2.contactus-title contact us
+            p.contactus-lozung Have an prject in mind?
+            p.contactus-description The right move at the right time saves your investment. live the dream of expanding your business.
+        .second-box    
+            address.address-box 
+                p.address-title Corporation
+                p.location 4517 Washington Ave. Manchester, Kentucky 39495
+                a.address-link.phone(href="tel:+(239)5550108") (239) 555-0108
+                a.address-link.email(href="mailto:contact@company.com") contact@company.com
 
-        .form-box 
-            form
-                input(type="text")
-                input(type="text") 
-                textarea(name="message", cols="60", rows="10") 
-                .submit-wrapper
-                    button(type="submit" ) Send Message
-                    p By clicking contact us button, you agree our terms and policy,
+            .form-box 
+                form
+                    input(type="text" placeholder="Name")
+                    input(type="text" placeholder="Email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$")
+                    textarea(name="message" cols="60" rows="10" placeholder="Message")
+                    .submit-wrapper
+                        button(type="submit" ) Send Message
+                        p By clicking contact us button, you agree our terms and policy,

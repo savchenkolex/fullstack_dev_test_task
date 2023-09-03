@@ -8,67 +8,219 @@
         justify-content: center;
         
         .contacts-wrapper {
-            display: grid;
-        grid-auto-columns: 422px;
-        grid-auto-rows: 200px;
-
-
-        .top-box {
-            grid-column: 1 / 4;
-            grid-row: 1;
-
-        }
-
-        .address-box {
-            grid-column: 1 / 2;
-            grid-row: 2;
-            width: 259px;
-
+        //     display: grid;
+        // grid-auto-columns: 422px;
+        // grid-auto-rows: 200px;
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
+            position: relative;
 
-            .address-title {
-                color: $color-gray-900;
-                font-feature-settings: 'clig' off, 'liga' off;
-                font-family: "Chivo";
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 1.22;
+            &::after {
+                content:"";
+                display: block;
+                width: 129px;
+                height: 129px;
+                background: url(../imgs/template/icons/wave-1.svg) no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: 17px;
+                right: -17px;
+                overflow: hidden;
+            }
+
+            .top-box {
+                // grid-column: 1 / 4;
+                // grid-row: 1;
+                margin-bottom: 60px;
+
+                .contactus-title {
+                    display: block;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    color: $color-gray-500;
+                    font-family: "Noto Sans";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    // margin-bottom: 15px;
+                }
+
+                .contactus-lozung {
+                    font-family: 'Chivo';
+                    font-size: 35px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 1.08;
+                    color: $color-gray-900;
+                    margin-bottom: 22px;
+                }
+
+                .contactus-description {
+                    color: $color-gray-600;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: Noto Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.75;
+                    width: 436px;
+                }
+
+            }
+
+            .second-box {
 
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 13px;
+                gap: 98px;
 
-                &::before {
-                    content: "";
-                    width: 18px;
-                    height: 18px;
-                    background: url(../imgs/template/icons/icon-home.svg) no-repeat;
-                    background-size: contain;
+                .address-box {
+                    // grid-column: 1 / 2;
+                    // grid-row: 2;
+                    width: 259px;
+        
+                    display: flex;
+                    flex-direction: column;
 
+                    color: $color-gray-600;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: 'Noto Sans';
+                    font-style: normal;
+                    font-weight: 400;
+        
+                    .address-title {
+                        color: $color-gray-900;
+                        
+                        font-family: "Chivo";
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.22;
+        
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 13px;
+        
+                        margin-bottom: 25px;
+        
+                        &::before {
+                            content: "";
+                            width: 18px;
+                            height: 18px;
+                            background: url(../imgs/template/icons/icon-home.svg) no-repeat;
+                            background-size: contain;
+        
+                        }
+                    }
+
+                    .location {
+                        margin-bottom: 15px;
+                        font-size: 16px;
+                        line-height: 1.75;
+                    }
+
+                    .address-link {
+                        font-size: 14px;
+                        text-decoration: underline;
+                        color: $color-gray-600;
+
+                        &.phone {
+                            margin-bottom: 10px;
+                        }
+
+                    }
+
+
+                    
+                }
+        
+                .form-box {
+                    // grid-column: 2 / 4;
+                    // grid-row: 2 / 4;
+                    width: 890px;
+        
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        input {
+                            border: none;
+                            height: 60px;
+                            padding-top: 21px;
+                            padding-bottom: 20px;
+                            padding-left: 30px;
+                            color: $color-gray-400;
+                            font-family: 'Noto Sans';
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+
+                        textarea {
+                            border: none;
+                            height: 150px;
+                            padding-top: 21px;
+                            padding-left: 30px;
+                            color: $color-gray-400;
+                            font-family: 'Noto Sans';
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            
+                        }
+                    }
+
+        
+                    .submit-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 65px;
+                        padding-top: 10px;
+
+                        button {
+                            background-color: $color-gray-900;
+                            color: white;
+                            border-radius: 50px;
+                            padding: 22px 28px 22px 32px;
+                            
+                            font-family: 'Chivo';
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 1.22;
+
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 16px;
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    background-image: url(../imgs/template/icons/arrow-small-right-w.svg);
+                                    background-repeat: no-repeat;
+                                    width: 12px;
+                                    height: 10px;
+                                    
+                                 }   
+                        }
+
+                        p {
+                            color: $color-gray-500;
+                            font-family: 'Noto Sans';
+                            font-feature-settings: 'clig' off, 'liga' off;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                        }
+                    }
                 }
             }
-            
-        }
-
-        .form-box {
-            grid-column: 2 / 4;
-            grid-row: 2 / 4;
-            width: 897px;
-
-            form {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .submit-wrapper {
-                display: flex;
-                flex-direction: row;
-                gap: 65px;
-            }
-        }
+        
         }
     }
 }
