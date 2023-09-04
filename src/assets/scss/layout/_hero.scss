@@ -8,6 +8,11 @@
         align-items: flex-end;
         justify-content: flex-start;
 
+        @media screen and (max-width:450px) {
+            flex-wrap: wrap;    
+            height: unset;  
+        }
+
         &::before {
             content:"";
             display: block;
@@ -41,6 +46,10 @@
         display: flex;
         flex-direction: column;
         gap: 64px;
+        @media screen and (max-width:450px) {
+            width: 100%;    
+              
+        }
 
         h1 {
           font-family: 'Chivo', sans-serif;
@@ -63,7 +72,11 @@
           @media screen and (max-width:992px) {
             font-size: 34px;
             
-        }
+            }
+          @media screen and (max-width:450px) {
+            font-size: 42px;    
+              
+          }
 
             span {
                 color: $color-green-900;
@@ -134,20 +147,30 @@
         // right: -102px;
         width: 48%;
 
+        @media screen and (max-width:450px) {
+            width: 100%;    
+              
+        }
+
         img {
             display: block;
             position: relative;
             right: -102px;
 
-            // width: 726px;
-            // @media screen and (min-width: 1390px) and (max-width: 1546px) {
-            //     right: -100px;
+            //width: 726px;
+            @media screen and (min-width: 1390px) and (max-width: 1546px) {
+                right: -100px;
                
-            // }
+            }
 
             // @media (min-widht:768px) and (max-width: 864px) {
             //     position: static;
             // }
+
+            @media screen and (max-width:450px) {
+               right: 0;    
+                  
+            }
         }
     }
 }

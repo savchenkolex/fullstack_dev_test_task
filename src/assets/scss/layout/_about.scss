@@ -16,7 +16,7 @@
             letter-spacing: -0.56px;
             font-feature-settings: 'clig' off, 'liga' off;
             line-height: 1.15;
-
+            text-align: center;
             margin-bottom: 43px;
 
             color: $color-gray-900;
@@ -34,6 +34,11 @@
             
             width: 743px;
             margin-bottom: 80px;
+
+            @media screen and (max-width:450px) {
+                width: 100%;    
+                
+            }
         }
     }
 }
@@ -77,6 +82,10 @@
             font-style: normal;
             font-weight: 400;
             line-height: 1.75;
+
+            @media screen and (max-width:450px) {
+                width: unset;   
+            }
         }
         
         &.acquisition {
